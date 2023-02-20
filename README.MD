@@ -66,7 +66,7 @@ In the event where the pre-requisites aren't being met, please follow the links 
 
 # Installation
 ## Deployments
-The client-side portion of this project is hosted on [Netlify](https://iretro.netlify.app) and database management is handled by [Render](https://www.render.com).
+The client-side portion of this project is hosted on [Netlify](https://soocerstore.netlify.app) and database management is handled by [Render](https://www.render.com)
 
 For Docker deployment / testing on your device, the following instructions are provided. Please note some modifications in the code may be required.
 
