@@ -29,14 +29,6 @@ const initialState: LoginState = {
   FailLogin: false
 };
 
-export const loginAsync = createAsyncThunk(
-  "login/loginUser",
-  async (detalis:any) => {
-    const response = await loginUser(detalis);
-    return response;
-  }
-);
-
 
 export const registerAsync = createAsyncThunk(
   "login/RegisterUser",
@@ -59,6 +51,13 @@ export const logOutAsync = createAsyncThunk(
    return response;
  });
 
+ export const loginAsync = createAsyncThunk(
+  "login/loginUser",
+  async (detalis:any) => {
+    const response = await loginUser(detalis);
+    return response;
+  }
+);
 
 
 export const loginSlice = createSlice({

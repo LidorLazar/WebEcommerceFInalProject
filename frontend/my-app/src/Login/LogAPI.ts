@@ -13,13 +13,6 @@ export function loginUser(details: any) {
 }
 
 
-
-
-
-//   export function RegisterUser(detalis:any) {;
-//   return new Promise<{ data: any, status:number }>((resolve) =>
-//   axios.post("http://127.0.0.1:8000/api/users/register/", { email: detalis.email , password: detalis.password, name: detalis.username, address: detalis.address, city: detalis.city  }).then((res) => resolve({ data: res.data, status:res.status})));
-// ;}
   
     
   export function logOutUser() {
