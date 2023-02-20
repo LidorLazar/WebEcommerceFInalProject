@@ -1,6 +1,6 @@
 <h1 align="center">
    <b>
-        <a href="iretro.netlify.app"><img src="./lazar.png" /></a><br>
+        <a href="https://soocerstore.netlify.app/"><img src="./lazar.png" /></a><br>
     </b>
 </h1>
 
@@ -141,6 +141,16 @@ In the first Terminal window, run the following command to start the Django back
 ```bash
 (env) py manage.py runserver
 ```
+
+## Defult admin user
+
+To access the admin panel of Django, please use the following credentials:
+
+```text
+Username: lidor
+Password: 123
+```
+
 
 Open the file titled **'server.ts'** and change the following line: 
 

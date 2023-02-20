@@ -31,7 +31,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     def get_token(cls, user):
         token = super().get_token(user)
         # Add more properties
-        token['username'] = user.username
+        token['username'] = user.username.lower()
         token['is_superuser'] = user.is_superuser
         return token
 
@@ -56,7 +56,7 @@ def register(request):
 
     try:
         # Chack if the username is exist in Profile
-        profile = Profile.objects.get(username=data['name'])
+        profile = Profile.objects.get(username=username.lower())
         return Response({'error': 'The username already exists. Please try again.'}, status=status.HTTP_400_BAD_REQUEST)
     except Profile.DoesNotExist:
         try:
