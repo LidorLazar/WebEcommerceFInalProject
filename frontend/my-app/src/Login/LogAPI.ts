@@ -1,11 +1,11 @@
 import axios from 'axios'
-
+import {SERVER} from '../server'
 
 
 
 export function loginUser(details: any) {
   return new Promise<{ data: any, status: number }>((resolve, reject) => {
-    axios.post("http://127.0.0.1:8000/api/users/login/", { username: details.user, password: details.password })
+    axios.post(SERVER+"/api/users/login/", { username: details.user, password: details.password })
       .then((res) => resolve({ data: res.data, status: res.status }))
       .catch((error) => reject(error));
       

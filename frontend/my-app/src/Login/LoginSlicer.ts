@@ -4,7 +4,7 @@ import  {logOutUser, loginUser}  from "./LogAPI";
 import jwt_decode from "jwt-decode";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from 'react-toastify';
-
+import {SERVER} from '../server'
 
 import axios from 'axios'
 
@@ -42,7 +42,7 @@ export const registerAsync = createAsyncThunk(
   "login/RegisterUser",
   async (detalis: any, thunkApi) => {
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/users/register/", { email: detalis.email , password: detalis.password, name: detalis.username, address: detalis.address, city: detalis.city  });
+      const response = await axios.post(SERVER+"/api/users/register/", { email: detalis.email , password: detalis.password, name: detalis.username, address: detalis.address, city: detalis.city  });
       return response.data;
     } catch (error:any) {
       return thunkApi.rejectWithValue(error.response.data.error);

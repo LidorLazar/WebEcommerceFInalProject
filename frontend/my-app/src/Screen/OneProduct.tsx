@@ -7,12 +7,13 @@ import Rating from "../Product/Rating";
 import { addToCard} from '../Cart/CartSlice'
 import Reviews from "./Reviews";
 import { selectMumReview } from '../reviews/ReviewSlice'
+import {SERVER} from '../server'
+
 
 
 
 const OneProduct = () => {
 
-  const SERVER = "http://127.0.0.1:8000"
   const [CorrectImage, setCorrectImage] = useState("");
   const [qty, setQty] = useState(1);
   const { id } = useParams();

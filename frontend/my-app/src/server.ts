@@ -1,0 +1,1 @@
+export const SERVER = "https://soccerstore.onrender.com"

@@ -7,7 +7,7 @@ import { addToCard } from './Cart/CartSlice'
 import { selectLogged } from './Login/LoginSlicer'
 import { selectMumReview, selectRating } from './reviews/ReviewSlice'
 import Carusel from "./Screen/Carusla";
-
+import {SERVER} from './server'
 
 
 
@@ -22,7 +22,6 @@ const App = () => {
 
   }
     , [logged])
-  const SERVER = "http://127.0.0.1:8000"
 
   // Home screen/page , Run in map loop all the product and display in home page
   return (

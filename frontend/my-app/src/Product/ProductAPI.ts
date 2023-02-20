@@ -1,11 +1,11 @@
 import axios from 'axios'
 import Product from '../model/product';
-
+import {SERVER} from '../server'
 
 
 export function GetAllProduct() {
   return new Promise<{ data: Product[] }>((resolve) =>
-  axios.get("http://127.0.0.1:8000/api/products/").then(res => resolve({data:res.data}))
+  axios.get(SERVER+"/api/products/").then(res => resolve({data:res.data}))
   
   );
 }
@@ -13,7 +13,7 @@ export function GetAllProduct() {
 
 export function GetOneProduct(id:number) {
   return new Promise<{ data: number  }>((resolve) =>
-  axios.get("http://127.0.0.1:8000/api/products/"+id).then(res => resolve({data: id}))
+  axios.get(SERVER+"/api/products/"+id).then(res => resolve({data: id}))
   );
 }
 
@@ -21,7 +21,7 @@ export function GetOneProduct(id:number) {
 
 export function GetAllProductInCategoryOne(id:number) {
   return new Promise<{ data: any}>((resolve) =>
-  axios.get("http://127.0.0.1:8000/api/category/"+id).then(res => resolve({data: res.data}))
+  axios.get(SERVER+"/api/category/"+id).then(res => resolve({data: res.data}))
 
   );
 }

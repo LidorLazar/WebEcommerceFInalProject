@@ -6,13 +6,13 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import Rating from "../Product/Rating";
 import { addToCard, selectCart } from '../Cart/CartSlice'
 import { selectMumReview, selectRating } from '../reviews/ReviewSlice'
+import {SERVER} from '../server'
+
 
 
 
 
 const OneProduct = () => {
-
-  const SERVER = "http://127.0.0.1:8000"
   const { id } = useParams();
   const dispatch = useAppDispatch();
   const product = useAppSelector(selectProductCategory)
@@ -37,7 +37,7 @@ const OneProduct = () => {
             <div>
               <Card className="py-3 p-3 mb-5">
                 <Link to={`/product/${product.id}`}>
-                  <Card.Img src={SERVER+product.image} />
+                  <Card.Img src={SERVER+'/'+product.image} />
                 </Link>
                 <Card.Body>
                   <Link to={`/product/${product.id}`}>

@@ -3,13 +3,13 @@ import { Offcanvas, Card, Button } from "react-bootstrap";
 import {selectCart, deletFromCart, addOneQty, removeOneOty} from '../Cart/CartSlice'
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import ProceedToCheckout from "../compomemts/ProceedToCheckout";
+import {SERVER} from '../server'
 
 
 
 const Cart = () => {
     const cart = useAppSelector(selectCart);
     const dispatch = useAppDispatch()
-    const SERVER = 'http://127.0.0.1:8000'
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -39,7 +39,7 @@ const Cart = () => {
 
         return (
           <Card key={index}>
-            <Card.Img className="d-block mx-auto" variant="top" src={SERVER+product.image} style={{width:'100px', height:'100px', textAlign:'center'}}/>
+            <Card.Img className="d-block mx-auto" variant="top" src={SERVER+'/'+product.image} style={{width:'100px', height:'100px', textAlign:'center'}}/>
             <Card.Body>
               <Card.Title>{product.product_name}</Card.Title>
               <Card.Text>

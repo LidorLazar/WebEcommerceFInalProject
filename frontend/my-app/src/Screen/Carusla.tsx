@@ -2,6 +2,7 @@ import React, {useEffect, useState } from "react";
 import Carousel  from 'react-bootstrap/Carousel';
 import  {selectProduct, GetAllProducttAsync} from '../Product/ProductSlice'
 import { useAppSelector, useAppDispatch } from "../app/hooks";
+import {SERVER} from '../server'
 
 
 
@@ -9,8 +10,7 @@ const Carusel = () => {
     const image = useAppSelector(selectProduct);
     const dispatch = useAppDispatch()
     useEffect(() => { dispatch(GetAllProducttAsync()) }, [])
-    const SERVER = "http://127.0.0.1:8000"
-  
+
     const [imageCarusla, setImageCarusla] = useState('')
     const [imageCarusla2, setImageCarusla2] = useState('')
     const [imageCarusla3, setImageCarusla3] = useState('')

@@ -1,0 +1,20 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend/my-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=project.settings
+      - SECRET_KEY= 'django-insecure-beemfmt8c47l9&0qpnu(o*c($x*4@*$81amgsg))6zm-9wf$t2'
+    command: python manage.py runserver 0.0.0.0:8000
