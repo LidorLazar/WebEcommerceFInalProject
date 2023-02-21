@@ -28,8 +28,8 @@ const App = () => {
 
     <div>
       
-      {/* <Carusel/> */}
-      <h1>Top 10 sale</h1>
+      <Carusel/>
+      <h1>Top sale</h1>
       <Row style={{margin:'20px'}}>
         {product.map((product, index) => (
           <Col key={index} sm={12} md={6} lg={4} xl={3}>

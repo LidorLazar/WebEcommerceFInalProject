@@ -27,7 +27,7 @@ return (
   <div style={{backgroundSize: 'cover', backgroundPosition:'center'}}>
     <Carousel variant="dark">
     <Carousel.Item interval={1000} >
-      <img src= "" />
+      <img src= {SERVER+imageCarusla} />
       <Carousel.Caption>
         <h3>First slide label</h3>
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -35,7 +35,7 @@ return (
 
     </Carousel.Item>
     <Carousel.Item interval={1000} >
-      <img src= "" />
+      <img src={SERVER+imageCarusla2} />
       <Carousel.Caption>
         <h3>First slide label</h3>
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
