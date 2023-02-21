@@ -3,12 +3,14 @@ import { Offcanvas, Card, Button } from "react-bootstrap";
 import {selectCart, deletFromCart, addOneQty, removeOneOty} from '../Cart/CartSlice'
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import ProceedToCheckout from "../compomemts/ProceedToCheckout";
+import {selectLogged} from '../Login/LoginSlicer'
 import {SERVER} from '../server'
 
 
 
 const Cart = () => {
     const cart = useAppSelector(selectCart);
+    const logged = useAppSelector(selectLogged);
     const dispatch = useAppDispatch()
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -69,7 +71,7 @@ const Cart = () => {
       })}
       <h3>Total: {total}$</h3>
               </Offcanvas.Body>
-             <ProceedToCheckout/>
+             {logged ? <ProceedToCheckout/> : 'To countino buy you need log in '}
             </Offcanvas>
         </div>
 
