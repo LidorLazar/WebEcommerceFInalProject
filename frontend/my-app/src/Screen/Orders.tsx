@@ -29,12 +29,6 @@ console.log(orderData)
           <td>{item.id}</td>
         </tr>
         <tr>
-          <td>total</td>
-          <td>
-           {item.price}$
-          </td>
-        </tr>
-        <tr>
           <td>date</td>
           <td>{item.order_date}</td>
         </tr>
