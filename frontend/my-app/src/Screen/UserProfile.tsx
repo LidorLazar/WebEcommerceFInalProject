@@ -4,6 +4,7 @@ import { Button, Card, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import {GetUserPofileAsync } from '../User/UserSlice'
+import {SERVER} from '../server'
 
 
 
@@ -26,7 +27,7 @@ const UserProfile = () => {
         <ListGroup.Item>address: <strong>{address}</strong></ListGroup.Item>
         <ListGroup.Item>city: <strong>{city}</strong></ListGroup.Item>
         <ListGroup.Item>phone_number: <strong>{phoneNumber}</strong></ListGroup.Item>
-        <ListGroup.Item>image profile: <img style={{width: "90px", height: "90px"}} src={`http://127.0.0.1:8000${image}`}/></ListGroup.Item>
+        <ListGroup.Item>image profile: <img style={{width: "90px", height: "90px"}} src={`${SERVER}${image}`}/></ListGroup.Item>
 
       </ListGroup>
     </Card>

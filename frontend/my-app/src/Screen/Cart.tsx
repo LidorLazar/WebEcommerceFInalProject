@@ -39,7 +39,7 @@ const Cart = () => {
 
         return (
           <Card key={index}>
-            <Card.Img className="d-block mx-auto" variant="top" src={SERVER+'/'+product.image} style={{width:'100px', height:'100px', textAlign:'center'}}/>
+            <Card.Img className="d-block mx-auto" variant="top" src={SERVER+product.image} style={{width:'100px', height:'100px', textAlign:'center'}}/>
             <Card.Body>
               <Card.Title>{product.product_name}</Card.Title>
               <Card.Text>

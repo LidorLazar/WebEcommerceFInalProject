@@ -11,7 +11,7 @@ const Order = () => {
     dispatch(GetUserOrderAsync())
 
 }, [])
-
+console.log(orderData)
 
   return (
     <div>
@@ -31,7 +31,7 @@ const Order = () => {
         <tr>
           <td>total</td>
           <td>
-            {item.price}$
+           {item.price}$
           </td>
         </tr>
         <tr>

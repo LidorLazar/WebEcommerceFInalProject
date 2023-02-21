@@ -37,7 +37,7 @@ const OneProduct = () => {
             <div>
               <Card className="py-3 p-3 mb-5">
                 <Link to={`/product/${product.id}`}>
-                  <Card.Img src={SERVER+'/'+product.image} />
+                  <Card.Img src={SERVER+product.image} />
                 </Link>
                 <Card.Body>
                   <Link to={`/product/${product.id}`}>

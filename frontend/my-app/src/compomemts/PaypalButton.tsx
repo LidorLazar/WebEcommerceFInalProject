@@ -42,7 +42,7 @@ const PaypalButton = () => {
           );
         },localStorage.removeItem("cart"), setTimeout(function () {
           window.location.replace("/")
-        },2000))
+        },3000))
         .catch((error: any) => {
           toast.error("Error capturing the payment", {
             position: toast.POSITION.TOP_CENTER,
