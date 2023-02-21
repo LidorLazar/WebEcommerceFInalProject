@@ -28,7 +28,7 @@ const App = () => {
 
     <div>
       
-      <Carusel/>
+      {/* <Carusel/> */}
       <h1>Top sale</h1>
       <Row style={{margin:'20px'}}>
         {product.map((product, index) => (
